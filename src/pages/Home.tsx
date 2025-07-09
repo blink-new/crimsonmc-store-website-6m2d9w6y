@@ -1,7 +1,10 @@
+import Sidebar from '../components/Sidebar'
+
 function Home() {
   return (
-    <div className="container mx-auto px-6 py-8 flex justify-end">
-      <div className="max-w-md w-full bg-slate-800 border-2 border-slate-700 rounded-xl p-8 mr-4" style={{marginRight: '2.5rem'}}>
+    <div className="container mx-auto px-6 py-8 flex gap-8">
+      <Sidebar />
+      <div className="flex-1 bg-slate-800 border-2 border-slate-700 rounded-xl p-8">
         <h2 className="text-3xl font-bold text-white mb-4">CrimsonMc Store</h2>
         <div className="space-y-6 text-slate-200">
           <div>
