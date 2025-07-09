@@ -468,7 +468,7 @@ const SidebarGroupAction = React.forwardRef<
       ref={ref}
       data-sidebar="group-action"
       className={cn(
-        "absolute right-3 top-3.5 flex aspect-square w-5 items-center justify-center rounded-md p-0 text-sidebar-foreground outline-none ring-sidebar-ring transition-transform hover:bg-sidebar-accent hover:text-sidebar-accent-foreground focus-visible:ring-2 [&>svg]:size-4 [&>svg]:shrink-0",
+        "absolute right-3 top-3.5 flex aspect-square w-5 items-center justify-center rounded-md p-0 text-sidebar-foreground outline-none ring-sidebar-ring transition-transform hover:bg-sidebar-accent hover:text-sidebar-foreground focus-visible:ring-2 peer-hover/menu-button:text-sidebar-accent-foreground [&>svg]:size-4 [&>svg]:shrink-0",
         // Increases the hit area of the button on mobile.
         "after:absolute after:-inset-2 after:md:hidden",
         "group-data-[collapsible=icon]:hidden",
@@ -769,3 +769,38 @@ export {
   SidebarTrigger,
   useSidebar,
 }
+
+<div className="flex items-center gap-3">
+  <img
+    src="/login-head.png"
+    alt="Login Avatar"
+    className="w-12 h-12 rounded-md object-cover"
+  />
+  <div>
+    <p className="text-white font-semibold">Guest</p>
+    <button className="text-sm text-gray-400 hover:text-gray-200">Login</button>
+  </div>
+</div>
+
+<div className="flex flex-col gap-4 p-4">
+  <div className="flex items-center gap-3 mb-6">
+    <img
+      src="/login-head.png"
+      alt="Login Avatar"
+      className="w-12 h-12 rounded-md object-cover"
+    />
+    <div>
+      <p className="text-white font-semibold">Guest</p>
+      <button className="text-sm text-gray-400 hover:text-gray-200">Login</button>
+    </div>
+  </div>
+  <nav className="flex flex-col gap-2">
+    <a className="text-blue-400 font-semibold" href="#">Home</a>
+    <a className="text-gray-200" href="#">Ranks</a>
+    <a className="text-gray-200" href="#">Coins</a>
+  </nav>
+  <div className="mt-6 bg-slate-800 rounded-lg p-4">
+    <h3 className="text-blue-400 text-lg font-semibold mb-2">Top Customer</h3>
+    <div className="text-gray-300 text-sm">No one had made any orders</div>
+  </div>
+</div>
